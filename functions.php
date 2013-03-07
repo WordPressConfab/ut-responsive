@@ -48,4 +48,24 @@ class UT_Text_Wrangler {
 
 add_filter('gettext', array('UT_Text_Wrangler', 'powered_by_text'), 10, 4);
 
+// the functions responsive_template_data() and responsive_theme_data() add
+// some <meta> tags with unregistered metadata keywords ("template" and
+// "theme"), which fails HTML validation. So, let's remove them. Can't just
+// remove_action(), because the parent theme calls add_action() after this
+// file runs.  So we insert this function as an action in get_header
+// (before wp_head) to remove those actions from wp_head.
+function remove_meta_tags() {
+    remove_action('wp_head', 'responsive_template_data');
+    remove_action('wp_head', 'responsive_theme_data');
+}
+
+add_action("get_header","remove_meta_tags");
+
+// Added an extra hook inside the #footer div
+function responsive_footer() 
+{
+    do_action('responsive_footer');
+}
+
+
 ?>

@@ -42,7 +42,7 @@ a {
      text-decoration:none;
 }
 
-a:hover {
+a:hover, a:focus {
      color:#6E6259;
      text-decoration:none;
 }
@@ -52,7 +52,7 @@ h1 a {
      font-size: 1.3em;
 }
 
-h1 a:hover {
+h1 a:hover, h1 a:focus {
      color: #A64B00;
 }
 
@@ -74,7 +74,7 @@ h1 a:hover {
      margin:0 auto;
 }
 
-.menu a:hover {
+.menu a:hover, .menu a:focus {
      background-color:#6E6259;
      background-image:-webkit-gradient(linear, left top, left bottom, from(#6E6259), to(#884d23));
      background-image:-webkit-linear-gradient(top, #6E6259, #884d23);
@@ -269,6 +269,27 @@ h1 a:hover {
     #footer .social-icons {
          text-align:center;
     }
+}
+
+.post-meta {
+     color: #767676;
+}
+
+#searchform label, label.tinynav {
+    position: absolute;
+    left: -999em;
+}
+
+.centered { 
+    text-align: center;
+}
+
+a, a:hover, a:focus {
+    text-decoration: underline; 
+}
+
+h1 a, h1 a:hover, h1 a:focus { 
+    text-decoration: none; 
 }
 
 
