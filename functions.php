@@ -23,24 +23,19 @@ function UTbranding()
 
 add_filter('responsive_in_header','UTbranding');
 
-function UTfooter()
+function UTfooter_links()
 {
-              echo '<div id="footer"><div id="footer-wrapper">
-                  <div class="grid col-940 clearfix fit">
-                  <center><a href="http://www.utexas.edu/its/">Information Technology Services</a>
+    echo '<div class="grid col-940 clearfix fit centered">
+                  <a href="http://www.utexas.edu/its/">Information Technology Services</a>
                   <br/>
                         <a href="http://www.utexas.edu/policies/privacy/">Web Privacy Policy</a> &nbsp;|&nbsp; 
-                        <a href="http://www.utexas.edu/brand-guidelines/web-guidelines/accessibility">Web Accessibility</a></center>
+                        <a href="http://www.utexas.edu/brand-guidelines/web-guidelines/accessibility">Web Accessibility</a>
  <br/>
  <br/>
-                  </div>
-  </div>
-  </div>
-  </div>
-  ';
+  </div>';
 }
 
-add_filter('wp_footer','UTfooter');
+add_filter('responsive_footer','UTfooter_links');
 
 // Using WP's i18n to stamp our name and link into the footer
 // Idea came from here: http://blog.ftwr.co.uk/archives/2010/01/02/mangling-strings-for-fun-and-profit/
