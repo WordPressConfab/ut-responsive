@@ -1,9 +1,4 @@
 <?php
-/////////////
-// $Id: functions.php 2 2012-10-06 04:40:39Z lja284 $
-// $URL: https://utforge.its.utexas.edu/repos/wp-ut-responsive/trunk/utresponsive/functions.php $
-/////////////
-
 // Custom Header -- make ours slightly different than the Responsive parent theme:
 // Note: the parent theme has code that users custom-header and get_custom_header .. which is WP 3.4+
 // We'll need to update our override code here when we upgrade our server.
