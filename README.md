@@ -3,7 +3,7 @@ ut-responsive
 
 UT Responsive - a UT branded responsive theme for WordPress.
 
-This is a child theme of [ThemeID's Responsive](http://themeid.com/responsive), so you'll need install that theme as well if you're using this on your own WordPress instance.
+This is a child theme of [ThemeID's Responsive](http://themeid.com/responsive), so you'll need to install that theme as well if you're using this on your own WordPress instance.
 
 Shameless Plug
 ==============
