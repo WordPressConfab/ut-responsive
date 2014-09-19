@@ -20,8 +20,7 @@ if ( !defined('ABSPATH')) exit;
 ?>
     </div><!-- end of #wrapper -->
     <?php responsive_wrapper_end(); // after wrapper hook ?>
-</div><!-- end of #container -->
-<?php responsive_container_end(); // after container hook ?>
+
 
 <div id="footer" class="clearfix">
 
@@ -30,24 +29,24 @@ if ( !defined('ABSPATH')) exit;
         <div class="grid col-940">
         
         <div class="grid col-540">
-		<?php if (has_nav_menu('footer-menu', 'responsive')) { ?>
-	        <?php wp_nav_menu(array(
-				    'container'       => '',
-					'fallback_cb'	  =>  false,
-					'menu_class'      => 'footer-menu',
-					'theme_location'  => 'footer-menu')
-					); 
-				?>
+        <?php if (has_nav_menu('footer-menu', 'responsive')) { ?>
+            <?php wp_nav_menu(array(
+                    'container'       => '',
+                    'fallback_cb'     =>  false,
+                    'menu_class'      => 'footer-menu',
+                    'theme_location'  => 'footer-menu')
+                    ); 
+                ?>
          <?php } ?>
          </div><!-- end of col-540 -->
          
          <div class="grid col-380 fit">
          <?php $options = get_option('responsive_theme_options');
-					
+                    
             // First let's check if any of this was set
-		
+        
                 echo '<ul class="social-icons">';
-					
+                    
                 if (!empty($options['twitter_uid'])) echo '<li class="twitter-icon"><a href="' . $options['twitter_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/twitter-icon.png" width="24" height="24" alt="Twitter">'
                     .'</a></li>';
@@ -59,15 +58,15 @@ if ( !defined('ABSPATH')) exit;
                 if (!empty($options['linkedin_uid'])) echo '<li class="linkedin-icon"><a href="' . $options['linkedin_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/linkedin-icon.png" width="24" height="24" alt="LinkedIn">'
                     .'</a></li>';
-					
+                    
                 if (!empty($options['youtube_uid'])) echo '<li class="youtube-icon"><a href="' . $options['youtube_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/youtube-icon.png" width="24" height="24" alt="YouTube">'
                     .'</a></li>';
-					
+                    
                 if (!empty($options['stumble_uid'])) echo '<li class="stumble-upon-icon"><a href="' . $options['stumble_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/stumble-upon-icon.png" width="24" height="24" alt="StumbleUpon">'
                     .'</a></li>';
-					
+                    
                 if (!empty($options['rss_uid'])) echo '<li class="rss-feed-icon"><a href="' . $options['rss_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/rss-feed-icon.png" width="24" height="24" alt="RSS Feed">'
                     .'</a></li>';
@@ -75,23 +74,23 @@ if ( !defined('ABSPATH')) exit;
                 if (!empty($options['google_plus_uid'])) echo '<li class="google-plus-icon"><a href="' . $options['google_plus_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/googleplus-icon.png" width="24" height="24" alt="Google Plus">'
                     .'</a></li>';
-					
+                    
                 if (!empty($options['instagram_uid'])) echo '<li class="instagram-icon"><a href="' . $options['instagram_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/instagram-icon.png" width="24" height="24" alt="Instagram">'
                     .'</a></li>';
-					
+                    
                 if (!empty($options['pinterest_uid'])) echo '<li class="pinterest-icon"><a href="' . $options['pinterest_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/pinterest-icon.png" width="24" height="24" alt="Pinterest">'
                     .'</a></li>';
-					
+                    
                 if (!empty($options['yelp_uid'])) echo '<li class="yelp-icon"><a href="' . $options['yelp_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/yelp-icon.png" width="24" height="24" alt="Yelp!">'
                     .'</a></li>';
-					
+                    
                 if (!empty($options['vimeo_uid'])) echo '<li class="vimeo-icon"><a href="' . $options['vimeo_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/vimeo-icon.png" width="24" height="24" alt="Vimeo">'
                     .'</a></li>';
-					
+                    
                 if (!empty($options['foursquare_uid'])) echo '<li class="foursquare-icon"><a href="' . $options['foursquare_uid'] . '">'
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/foursquare-icon.png" width="24" height="24" alt="foursquare">'
                     .'</a></li>';
@@ -101,6 +100,8 @@ if ( !defined('ABSPATH')) exit;
          </div><!-- end of col-380 fit -->
          
          </div><!-- end of col-940 -->
+         <?php get_sidebar('footer'); ?>
+
          <?php get_sidebar('colophon'); ?>
                 
         <div class="grid col-300 copyright">
@@ -122,7 +123,8 @@ if ( !defined('ABSPATH')) exit;
     </div><!-- end #footer-wrapper -->
     
 </div><!-- end #footer -->
-
+</div><!-- end of #container -->
+<?php responsive_container_end(); // after container hook ?>
 <?php wp_footer(); ?>
 </body>
 </html>
