@@ -1,16 +1,16 @@
 /*
-Theme Name: UT Responsive
-Theme URI:  https://blogs.utexas.edu/utresponsive/
+Theme Name: UT Responsive Small Image
+Theme URI:  https://sites.utexas.edu/utresponsive/
 Description: Responsive WordPress Theme that features 9 page Templates such as Blog, Blog Summary and Template based layout designs: sidebar/content, sidebar/content half, content/sidebar and content/sidebar half. There is also full width page, sitemap Template as well as landing page for your PPC or any other purposes. Responsive also supports 9 widget areas and best of all this Theme is crafted with fluid proportion-based grid system of our own to adapt the design to the viewing environment. There are also Theme Options to control the content, webmaster tools, logo managament, social icons and 4 navigation menus. Currently translated in German, French, Portuguese, Italian, Swedish, Malay, Catalan, Spanish, Bulgarian, Norwegian, Croatian and Serbian (Latin) language. Everything is backed by our FREE dedicated support forums @ http://themeid.com/forum
 Author: University Blog Team
-Author URI: https://blogs.utexas.edu/utresponsive/
+Author URI: https://sites.utexas.edu/utresponsive/
 Template: responsive
 Version: 1.0.0
 */
 
 /* =Import Responsive Theme Styles
 -------------------------------------------------------------- */
-@import url('../responsive/style.css');
+@import url('../responsive-child-theme/style.css');
 
 /* =Start from here :)
 -------------------------------------------------------------- */
@@ -30,14 +30,14 @@ body {
      background:url(images/sand.png)
      color:#404040;
      font-family: "Arimo", Helvetica, Arial, sans-serif;
-     font-size:15px;
+     font-size:10.5pt;
      line-height:1.5em;
      text-rendering:optimizeLegibility;
 }
 
 
 a {
-     color:#115E67;
+     color:#BF5700;
      font-weight:400;
      text-decoration:none;
 }
@@ -48,12 +48,12 @@ a:hover, a:focus {
 }
 
 h1 a {
-     color: #cc5500;
-     font-size: 1.3em;
+    color: #BF5700;
+    font-size: 1.3em;
 }
 
 h1 a:hover, h1 a:focus {
-     color: #A64B00;
+    color: #CC5500;
 }
 
 .top-menu {
@@ -62,15 +62,15 @@ h1 a:hover, h1 a:focus {
 }
 
 .menu {
-     background-color:#cc5500;
-     background-image:-webkit-gradient(linear, left top, left bottom, from(#CC5500), to(#a04605));
-     background-image:-webkit-linear-gradient(top, #cc5500, #a04605);
-     background-image:-moz-linear-gradient(top, #cc5500, #a04605);
-     background-image:-ms-linear-gradient(top, #cc5500, #a04605);
-     background-image:-o-linear-gradient(top, #cc5500, #a04605);
-     background-image:linear-gradient(top, #cc5500, #a04605);
+     background-color:#BF5700;
+     background-image:-webkit-gradient(linear, left top, left bottom, from(#BF5700), to(#BF5700));
+     background-image:-webkit-linear-gradient(top, #BF5700, #BF5700);
+     background-image:-moz-linear-gradient(top, #BF5700, #BF5700);
+     background-image:-ms-linear-gradient(top, #BF5700, #BF5700);
+     background-image:-o-linear-gradient(top, #BF5700, #BF5700);
+     background-image:linear-gradient(top, #BF5700, #BF5700);
      clear:both;
-         filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc5500, endColorstr=#a04605);
+         filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF5700, endColorstr=#BF5700);
      margin:0 auto;
 }
 
@@ -110,7 +110,7 @@ h1 a:hover, h1 a:focus {
      border-left:1px solid #2d2c2c;
      color:#fff;
      display:block;
-     font-size:14px;
+     font-size:1em;
      font-weight:800;
      height:45px;
      line-height:45px;
@@ -139,9 +139,9 @@ h1 a:hover, h1 a:focus {
 
 
 .call-to-action a.button {
-     font-size:24px;
-     padding:15px 35px;
-     margin-bottom:15px;
+    font-size:1.714em;
+    padding:15px 35px;
+    margin-bottom:15px;
 }
 
 #featured {
@@ -163,7 +163,7 @@ h1 a:hover, h1 a:focus {
 
 .post-data {
      clear:both;
-     font-size:13px;
+     font-size:.929em;
      font-weight:700;
      margin-top:20px;
 }
@@ -174,105 +174,42 @@ h1 a:hover, h1 a:focus {
      border:1px solid #d6d6d6;
      border-radius:6px;
      background-color:#f9f9f9;
-     font-size:14px;
+     font-size:1em;
      margin:0 0 20px;
      padding:20px;
 }
 
-#footer {
-     color:#333;
-     font-size:14px;
-     line-height:1.5em;
+.navigation a {
+        color: #63666A;
+        padding: 4px 10px;
 }
+
+#footer {
+background-color: #FFFFFF;
+border: 1px none;
+border-radius: 7px 7px 7px 7px;
+border-style: solid;
+border-color: #CCCCCC;
+border-width: 1px;
+color: #63666A;
+font-size: 1em;
+line-height: 1.5em;
+margin-bottom: 50px;
+padding-top: 5px;
+z-index: 100;
+}
+
+#footer .social-icons {
+    margin-top:5%;
+}
+
 
 /* Hide the "powered by FireStats" because it makes the footer less pretty */
 .fs_powered_by { display: none; }
 
 
-/* =Media Queries
-    If you're working on a Child Theme, make sure that all
-     media queries are included in your style.css
--------------------------------------------------------------- */
-@media screen and (max-width: 980px) {
-
-    body {
-    }
-
-    .grid, .grid-right {
-         float:none;
-    }
-     
-     #featured-image .fluid-width-video-wrapper {
-         margin:20px 0 0 0;
-    }
-}
-
-@media screen and (max-width: 650px) {
-
-    body {
-    }
-
-    #header #logo {
-         float:none;
-         text-align:center;
-    }
-
-    .grid, .grid-right {
-         float:none;
-    }
-
-     #featured-image .fluid-width-video-wrapper {
-         margin:20px 0 0 0;
-    }
-     
-    .menu li, .top-menu, .footer-menu li, .sub-header-menu li {
-         float:none;
-         text-align:center;
-    }
-     
-    #footer {
-         text-align:center;
-    }
-
-    #footer .social-icons {
-         text-align:center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    body {
-    }
-
-    #header #logo {
-         float:none;
-         text-align:center;
-    }
-
-    .grid, .grid-right {
-         float:none;
-    }
-     
-     #featured-image .fluid-width-video-wrapper {
-         margin:20px 0 0 0;
-    }
-
-    .menu li, .top-menu, .footer-menu li, .sub-header-menu li {
-         float:none;
-         text-align:center;
-    }
-     
-    #footer {
-         text-align:center;
-    }
-
-    #footer .social-icons {
-         text-align:center;
-    }
-}
-
 .post-meta {
-     color: #767676;
+    color: #767676;
 }
 
 #searchform label, label.tinynav {
@@ -290,6 +227,91 @@ a, a:hover, a:focus {
 
 h1 a, h1 a:hover, h1 a:focus { 
     text-decoration: none; 
+}
+
+/* =Media Queries
+    If you're working on a Child Theme, make sure that all
+    media queries are included in your style.css
+-------------------------------------------------------------- */
+@media screen and (max-width: 980px) {
+
+    body {
+    }
+
+    .grid, .grid-right {
+        float:none;
+    }
+    
+    #featured-image .fluid-width-video-wrapper {
+        margin:20px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    body {
+    }
+
+    #header #logo {
+        float:none;
+        text-align:center;
+    }
+
+    .grid, .grid-right {
+        float:none;
+    }
+
+    #featured-image .fluid-width-video-wrapper {
+        margin:20px 0 0 0;
+    }
+    
+    .menu li, .top-menu, .footer-menu li, .sub-header-menu li {
+        float:none;
+        text-align:center;
+    }
+    
+    #footer {
+        text-align:center;
+    }
+
+    #footer .social-icons {
+        text-align:center;      
+    }
+    .social-icons {
+    margin-top:5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+    }
+
+    #header #logo {
+        float:none;
+        text-align:center;
+    }
+
+    .grid, .grid-right {
+        float:none;
+    }
+    
+    #featured-image .fluid-width-video-wrapper {
+        margin:20px 0 0 0;
+    }
+
+    .menu li, .top-menu, .footer-menu li, .sub-header-menu li {
+        float:none;
+        text-align:center;
+    }
+    
+    #footer {
+        text-align:center;
+    }
+
+    #footer .social-icons {
+        text-align:center;
+    }
 }
 
 
